@@ -37,6 +37,6 @@ func main() {
 			ctx.Error("not found", fasthttp.StatusNotFound)
 		}
 	}
-	fasthttp.ListenAndServe(":523", m)
-	fmt.Println("start server...at port 523")
+	fasthttp.ListenAndServe(":21", m)
+	fmt.Println("start server...at port 21")
 }

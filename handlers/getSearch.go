@@ -25,12 +25,12 @@ func GetSearchHandler(ctx *fasthttp.RequestCtx) {
 	defer db.Close()
 
 	var lines []models.LineModel
-	sql := "SELECT line_id, line_name FROM `lines` WHERE line_name like " + "'" + keyword + "%" + "'" + " order by line_name+1"
+	sql := "SELECT line_id, line_name FROM `btk_lines` WHERE line_name like " + "'" + keyword + "%" + "'" + " order by line_name+1"
 	fmt.Println("line sql = ", sql)
 	db.Raw(sql).Find(&lines)
 
 	var stations []models.StationModel
-	sql = "SELECT st_name FROM line_station WHERE st_name like " + "'" + keyword + "%" + "'" + " group by st_name"
+	sql = "SELECT st_name FROM btk_line_station WHERE st_name like " + "'" + keyword + "%" + "'" + " group by st_name"
 	fmt.Println("station sql = ", sql)
 	db.Raw(sql).Find(&stations)
 
