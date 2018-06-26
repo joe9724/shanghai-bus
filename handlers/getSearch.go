@@ -25,7 +25,7 @@ func GetSearchHandler(ctx *fasthttp.RequestCtx) {
 	defer db.Close()
 
 	var lines []models.LineModel
-	sql := "SELECT line_id, line_name FROM `btk_lines` WHERE line_name like " + "'" + keyword + "%" + "'" + " order by line_name+1"
+	sql := "SELECT * FROM `btk_lines` WHERE line_name like " + "'" + keyword + "%" + "'" + " order by line_name+1"
 	fmt.Println("line sql = ", sql)
 	db.Raw(sql).Find(&lines)
 

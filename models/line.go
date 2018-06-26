@@ -6,6 +6,12 @@ type LineStation struct {
 type LineModel struct {
 	LineID   int64  `json:"line_id"`
 	LineName string `json:"line_name"`
+	EndEarlytime string `json:"end_earlytime"`
+	EndLatetime string `json:"end_latetime"`
+	EndStop string `json:"end_stop"`
+	StartEarlytime string `json:"start_earlytime"`
+	StartLatetime string `json:"start_latetime"`
+	StartStop string `json:"start_stop"`
 }
 type StationModel struct {
 	LineID    int64       `json:"line_id"`

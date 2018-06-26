@@ -27,3 +27,14 @@ type BtkReal struct{
 
 }
 
+type BtkCar struct{
+	Cars []Car `json:"cars"`
+}
+
+type Car struct{
+	Terminal string `json:"terminal"`
+	StopDis string `json:"stopdis"`
+	Distance string `json:"distance"`
+	Time string `json:"time"`
+
+}

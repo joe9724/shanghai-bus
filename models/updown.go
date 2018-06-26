@@ -8,3 +8,5 @@ type UpDown struct {
 	EndStation string `json:"end_station"`
 }
 
+
+
